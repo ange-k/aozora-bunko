@@ -14,11 +14,9 @@
 </head>
 
 <body>
-  <header>
-    <!-- logo, グローバルナビゲーション -->
+  <header><!-- logo, グローバルナビゲーション -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <!-- スマホで表示されるハンバーガメニュー -->
+      <div class="container"><!-- スマホで表示されるハンバーガメニュー -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -40,24 +38,63 @@
       </div>
     </nav>
   </header>
-  <nav>
-    <!-- 検索ボックス -->
-    検索バー
+  <nav class="container my-2"><!-- 検索ボックス -->
+    <div class="row">
+      <div class="col-lg-3 col-lg-offset-9">
+        <form>
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
   </nav>
-  <aside>
-    <!-- 左サイドバー -->
-    左サイド
-  </aside>
-  <main>
-    <!-- 検索結果エリア -->
-    検索結果
-  </main>
-  <aside>
-    <!-- 右サイドバー -->
-    右サイド
-  </aside>
-  <footer>
-    フッター
+  <div class="container">
+    <div class="row">
+      <aside class="col-lg-3 border border-dark"> <!-- 左サイドバー -->
+        <h3>著者リスト</h3>
+      </aside>
+      <main class="col-lg-6"> <!-- 検索結果エリア -->
+        <div class="row">
+          <div class="card col-lg-6">
+            <img class="card-img-top" src="./img/book.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">羅生門</h5>
+              <p class="card-text">ああああ</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">年代</li>
+              <li class="list-group-item">国</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">本を読む</a>
+              <a href="#" class="card-link">著者の本を見る</a>
+            </div>
+          </div>
+        </div>
+      </main>
+      <aside class="col-lg-3"> <!-- 右サイドバー -->
+        <div class="border border-dark">
+          <h3>人気アクセスランキング</h3>
+          <h3>最近追加された本</h3>
+          <h3>サジェスト</h3>
+        </div>
+        <div class="border border-dark mt-2">
+          <h3>外部リンク</h3>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <footer class="p-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-lg-offset-2">
+          著作権表記
+        </div>
+        <div class="col-lg-5">
+          プライバリーポリシー
+        </div>
+      </div>
+    </div>
   </footer>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
