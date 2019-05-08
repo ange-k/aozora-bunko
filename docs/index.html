@@ -8,14 +8,14 @@
 
   <link rel="stylesheet" href="./index.css"/>
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
   <title>AozoraBunko</title>
 </head>
@@ -67,7 +67,7 @@
       <div class="carousel-item active">
         <img src="./img/gate.jpg" class="d-block w-100">
         <div class="carousel-header">
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption d-none d-block">
             <h5>羅生門</h5>
             <p>芥川龍之介</p>
           </div>
@@ -76,7 +76,7 @@
       <div class="carousel-item">
         <img src="./img/rain.jpg" class="d-block w-100">
         <div class="carousel-header">
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption d-none d-block">
             <h5>雨ニモマケズ</h5>
             <p>宮沢賢治</p>
           </div>
@@ -85,7 +85,7 @@
       <div class="carousel-item">
         <img src="./img/tiger.jpg" class="d-block w-100">
         <div class="carousel-header">
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption d-none d-block">
             <h5>山月記</h5>
             <p>中島淳</p>
           </div>
@@ -101,93 +101,77 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
-      <aside class="offset-1 col-3 col-lg-2"> <!-- 左サイドバー -->
-        <div class="border border-dark">
-          <h3>著者リスト</h3>
+      <main class="col-md-8">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a href="#tab1" class="nav-link active" data-toggle="tab">今日の一冊</a>
+          </li>
+          <li class="nav-item">
+            <a href="#tab2" class="nav-link" data-toggle="tab">新規入荷</a>
+          </li>
+          <li class="nav-item">
+            <a href="#tab3" class="nav-link" data-toggle="tab">ランダム</a>
+          </li>
+          <li class="nav-item">
+            <a href="#tab4" class="nav-link" data-toggle="tab">おすすめ</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div id="tab1" class="tab-pane active">
+            <div class="card">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="./img/book.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">カードのタイトル</h5>
+                    <p class="card-text">...</p>
+                    <p class="card-text"><small class="text-muted">最終更新3分前</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tab2" class="tab-pane">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/221808/photo2.jpg" alt="" class="img-fluid">
+          </div>
+          <div id="tab3" class="tab-pane">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/221808/photo3.jpg" alt="" class="img-fluid">
+          </div>
+          <div id="tab4" class="tab-pane">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/221808/photo4.jpg" alt="" class="img-fluid">
+          </div>
         </div>
-      </aside>
-      <main class="col-8 col-lg-6"> <!-- 検索結果エリア -->
-        <div class="row">
-          <!-- card1組目 -->
-          <div class="card offset-1 col-5">
-            <img class="card-img-top" src="./img/book.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">羅生門</h5>
-              <p class="card-text">ああああ</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">年代</li>
-              <li class="list-group-item">国</li>
-            </ul>
-            <div class="card-body">
-              <a href="#" class="card-link">本を読む</a>
-              <a href="#" class="card-link">著者の本を見る</a>
-            </div>
-          </div>
-          <div class="card col-5">
-            <img class="card-img-top" src="./img/book.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">羅生門</h5>
-              <p class="card-text">ああああ</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">年代</li>
-              <li class="list-group-item">国</li>
-            </ul>
-            <div class="card-body">
-              <a href="#" class="card-link">本を読む</a>
-              <a href="#" class="card-link">著者の本を見る</a>
-            </div>
-          </div>
-        <!-- card2組目 -->
-        <div class="card offset-1 col-5">
-            <img class="card-img-top" src="./img/book.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">羅生門</h5>
-              <p class="card-text">ああああ</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">年代</li>
-              <li class="list-group-item">国</li>
-            </ul>
-            <div class="card-body">
-              <a href="#" class="card-link">本を読む</a>
-              <a href="#" class="card-link">著者の本を見る</a>
-            </div>
-          </div>
-          <div class="card col-5">
-            <img class="card-img-top" src="./img/book.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">羅生門</h5>
-              <p class="card-text">ああああ</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">年代</li>
-              <li class="list-group-item">国</li>
-            </ul>
-            <div class="card-body">
-              <a href="#" class="card-link">本を読む</a>
-              <a href="#" class="card-link">著者の本を見る</a>
-            </div>
-          </div>
-        <!-- row end -->
-        </div>
-
       </main>
-      <aside class="col-lg-2" id="right-sidebar"> <!-- 右サイドバー -->
-        <div class="border border-dark">
-          <h3>人気アクセスランキング</h3>
-          <h3>最近追加された本</h3>
-          <h3>サジェスト</h3>
+      <aside class="col-md-4">
+        <div class="card bg-dark text-white">
+          <img class="card-img card-object-fit" src="./img/book.jpg" alt="カードの画像">
+          <div class="card-img-overlay">
+            <h5 class="card-title">カードのタイトル</h5>
+            <p class="card-text"><small>最終更新3分前</small></p>
+          </div>
         </div>
-        <div class="border border-dark mt-2">
-          <h3>外部リンク</h3>
+        <div class="card bg-dark text-white">
+          <img class="card-img card-object-fit" src="./img/gate.jpg" alt="カードの画像">
+          <div class="card-img-overlay">
+            <h5 class="card-title">カードのタイトル</h5>
+            <p class="card-text"><small>最終更新3分前</small></p>
+          </div>
+        </div>
+        <div class="card bg-dark text-white">
+          <img class="card-img card-object-fit" src="./img/rain.jpg" alt="カードの画像">
+          <div class="card-img-overlay">
+            <h5 class="card-title">カードのタイトル</h5>
+            <p class="card-text"><small>最終更新3分前</small></p>
+          </div>
         </div>
       </aside>
     </div>
   </div>
+
   <footer class="p-3">
     <div class="container">
       <div class="row">
