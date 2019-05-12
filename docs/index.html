@@ -6,26 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <link rel="stylesheet" href="./index.css"/>
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
 
-  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <title>AozoraBunko</title>
 </head>
 
-<body>
+<body id="page--top" class="wf-mplus1p bg-light">
   <header><!-- logo, グローバルナビゲーション -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container"><!-- スマホで表示されるハンバーガメニュー -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">
+          <img src="./img/logo.png"/>
+        </a>
         <div class="collapse navbar-collapse" id="navbarNav">
+          <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">著作者一覧<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#">TOP<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">著作者一覧</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">作品一覧</a>
@@ -38,74 +56,155 @@
       </div>
     </nav>
   </header>
-  <nav class="container my-2"><!-- 検索ボックス -->
-    <div class="row">
-      <div class="col-lg-3 col-lg-offset-9">
-        <form>
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+  <!-- カルーセル -->
+  <div id="carouselExampleIndicators" class="carousel slide mb-5" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner ">
+      <div class="carousel-item active">
+        <img src="./img/gate.jpg" class="d-block w-100">
+        <div class="carousel-header">
+          <div class="carousel-caption d-none d-block">
+            <h5>羅生門</h5>
+            <p>芥川龍之介</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./img/rain.jpg" class="d-block w-100">
+        <div class="carousel-header">
+          <div class="carousel-caption d-none d-block">
+            <h5>雨ニモマケズ</h5>
+            <p>宮沢賢治</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./img/tiger.jpg" class="d-block w-100">
+        <div class="carousel-header">
+          <div class="carousel-caption d-none d-block">
+            <h5>山月記</h5>
+            <p>中島淳</p>
+          </div>
+        </div>
       </div>
     </div>
-  </nav>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
   <div class="container">
     <div class="row">
-      <aside class="col-lg-3 border border-dark"> <!-- 左サイドバー -->
-        <h3>著者リスト</h3>
-      </aside>
-      <main class="col-lg-6"> <!-- 検索結果エリア -->
-        <div class="row">
-          <div class="card col-lg-6">
-            <img class="card-img-top" src="./img/book.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">羅生門</h5>
-              <p class="card-text">ああああ</p>
+      <main class="col-md-8">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a href="#tab1" class="nav-link active" data-toggle="tab">今日の一冊</a>
+          </li>
+          <li class="nav-item">
+            <a href="#tab2" class="nav-link" data-toggle="tab">新規入荷</a>
+          </li>
+          <li class="nav-item">
+            <a href="#tab3" class="nav-link" data-toggle="tab">ランダム</a>
+          </li>
+          <li class="nav-item">
+            <a href="#tab4" class="nav-link" data-toggle="tab">おすすめ</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <!-- カードデザイン -->
+          <div id="tab1" class="tab-pane active">
+            <div class="card">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="./img/book.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">カードのタイトル</h5>
+                    <p class="card-text">...</p>
+                    <p class="card-text"><small class="text-muted">最終更新3分前</small></p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">年代</li>
-              <li class="list-group-item">国</li>
-            </ul>
-            <div class="card-body">
-              <a href="#" class="card-link">本を読む</a>
-              <a href="#" class="card-link">著者の本を見る</a>
+            <!-- ここまでカード-->
+            <!-- カードデザイン -->
+            <div class="card">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="./img/gate.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">カードのタイトル</h5>
+                    <p class="card-text">...</p>
+                    <p class="card-text"><small class="text-muted">最終更新3分前</small></p>
+                  </div>
+                </div>
+              </div>
             </div>
+            <!-- ここまでカード-->
+          </div>
+
+          <div id="tab2" class="tab-pane">
+            <div>sample</div>
+          </div>
+          <div id="tab3" class="tab-pane">
+            <div>sample</div>
+          </div>
+          <div id="tab4" class="tab-pane">
+            <div>sample</div>
           </div>
         </div>
       </main>
-      <aside class="col-lg-3"> <!-- 右サイドバー -->
-        <div class="border border-dark">
-          <h3>人気アクセスランキング</h3>
-          <h3>最近追加された本</h3>
-          <h3>サジェスト</h3>
+      <aside class="col-md-4">
+        アクセスランキング
+        <div class="card bg-dark text-white">
+          <img class="card-img card-object-fit" src="./img/book.jpg" alt="カードの画像">
+          <div class="card-img-overlay">
+            <h5 class="card-title">カードのタイトル</h5>
+            <p class="card-text"><small>最終更新3分前</small></p>
+          </div>
         </div>
-        <div class="border border-dark mt-2">
-          <h3>外部リンク</h3>
+        <div class="card bg-dark text-white">
+          <img class="card-img card-object-fit" src="./img/gate.jpg" alt="カードの画像">
+          <div class="card-img-overlay">
+            <h5 class="card-title">カードのタイトル</h5>
+            <p class="card-text"><small>最終更新3分前</small></p>
+          </div>
+        </div>
+        <div class="card bg-dark text-white">
+          <img class="card-img card-object-fit" src="./img/rain.jpg" alt="カードの画像">
+          <div class="card-img-overlay">
+            <h5 class="card-title">カードのタイトル</h5>
+            <p class="card-text"><small>最終更新3分前</small></p>
+          </div>
         </div>
       </aside>
     </div>
   </div>
-  <footer class="p-3">
+
+  <footer class="p-3 footer">
     <div class="container">
+      <hr>
       <div class="row">
         <div class="col-lg-5 col-lg-offset-2">
           著作権表記
         </div>
         <div class="col-lg-5">
-          プライバリーポリシー
+          プライバシーポリシー
         </div>
       </div>
     </div>
   </footer>
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
 </body>
 
 </html>
