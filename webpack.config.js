@@ -42,7 +42,17 @@ module.exports = {
 			}
 		]
 	},
-
+	plugins: [
+    new webpack.ProvidePlugin({
+        jQuery: "jquery",
+        $: "jquery",
+        'window.jQuery': 'jquery',
+        Popper: ['popper.js', 'default'],
+    })
+  ],
+  resolve: {
+    extensions: ['.js']
+  },
 	output: {
 //		chunkFilename: '[name].[chunkhash].js',  // ランダム名の生成。キャッシュのある状態ではこうしないと
 //		filename: '[name].[chunkhash].js',       // CSSやJSが反映されるまで時間がかかる
